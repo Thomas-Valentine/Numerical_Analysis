@@ -1,6 +1,11 @@
-% ---VanishingSet.m-------------------------------------------------- % 
+% ---VanishingSet.m-------------------------------------------------- %
 
 % ---INFORMATION----------------------------------------------------- %
+% REFERENCE: Telen, S., Van Barel, M. A stabilized normal form
+% algorithm for generic systems of polynomial equations. Journal of
+% Computational and Applied Mathematics volume 342, pages 119–132,
+% 2017. https://doi.org/10.1016/j.cam.2018.04.021
+%
 % This program generates n random polynomials f1,f2,...,fn with n
 % variables. It then finds the normal forms of monomials with respect
 % to a basis of the quotient ring C[x1,x2,...xn]/I, where I is the
@@ -8,7 +13,7 @@
 % compute certain multiplication matrices, the eigenvalues of which
 % are then used to find the vanishing set for f1,f2,...,fn. The error
 % is given for this solution.
-% ------------------------------------------------------------------- %    
+% ------------------------------------------------------------------- %
 
 % ---INPUTS---------------------------------------------------------- %
 n = 3; d = 2*ones(n,1);
