@@ -310,11 +310,11 @@ function out = CheckSolution(P,f,n,d)
     d0 = max(d);
     for i = 1:n
         for j = 1:prod(d)
+            s = 0;
             for k = 1:nchoosek(d0 + n,n)
-                s = (f(i,k)*prod((P(j,:)').^f(n+1:end,k)));
-                out = out + s;
+                s = s + (f(i,k)*prod((P(j,:)').^f(n+1:end,k)));
             end
-            out = abs(out);
+            s = abs(s); out = out + s;
         end
     end
 end
